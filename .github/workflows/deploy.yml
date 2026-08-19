@@ -1,0 +1,16 @@
+name: Deploy to Gumroad
+on:
+  push:
+    branches: [ main, master ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Deploy Page
+        run: |
+          npm install -g @gumroad/cli
+          npx gumroad pages push profile profile.html
