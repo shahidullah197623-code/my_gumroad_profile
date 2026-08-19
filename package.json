@@ -1,0 +1,6 @@
+{
+  "name": "gumroad-profile",
+  "dependencies": {
+    "@gumroad/cli": "latest"
+  }
+}
